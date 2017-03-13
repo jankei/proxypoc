@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "nodemon --exec npm run debug",
+    "debug": "node --inspect server.js"
+  },
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "express": "*",
+    "http-proxy-middleware": "^0.17.4"
+  }
+}
