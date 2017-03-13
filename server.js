@@ -22,16 +22,9 @@ var options = {
         if( proxyRes.headers && proxyRes.headers[ 'content-length' ] ){
           res.setHeader(
             'content-length',
-        parseInt( proxyRes.headers[ 'content-length' ], 10 ) + prependScript.length
+            parseInt( proxyRes.headers[ 'content-length' ], 10 ) + prependScript.length
           );
         }
-        // console.log(proxyRes.headers['content-length']);
-        // This disables chunked encoding
-        res.setHeader( 'transfer-encoding', '' );
-
-        // Disable cache for all http as well
-        res.setHeader( 'cache-control', 'no-cache' );
-
         _writeHead.apply( this, arguments );
       };
     }
